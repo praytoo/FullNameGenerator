@@ -14,7 +14,7 @@ public class FullNameParser {
         String lastName = names[1];
 
         System.out.println();
-        System.out.println(firstName);
-        System.out.println(lastName);
+        System.out.println("First name: " + firstName);
+        System.out.println("Last name: " + lastName);
     }
 }
