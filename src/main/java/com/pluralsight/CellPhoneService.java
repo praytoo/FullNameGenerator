@@ -16,11 +16,17 @@ public class CellPhoneService {
             phone2.setPhoneNumber("310-123-4567");
             phone2.setOwner("Saint Praytoo");
 
+            Phone phone3 = new Phone(2222222, "Google pixel", "At&T", "323-456-7890", "Mary Apple");
+
+
             display(phone1);
             display(phone2);
+            display(phone3);
 
             phone1.dial(phone2.getPhoneNumber() );
             phone2.dial(phone1.getPhoneNumber() );
+            phone1.dial(phone3.getPhoneNumber());
+
 
         }
     public static void display(Phone phone) {
@@ -32,4 +38,8 @@ public class CellPhoneService {
         System.out.println("Serial Number: " + phone.getSerialnumber());
         System.out.println("-------------");
     }
+    public void dial(Phone phone) {
+        System.out.println(phone.getOwner() + " phone is calling " + phone.getPhoneNumber());
     }
+
+}

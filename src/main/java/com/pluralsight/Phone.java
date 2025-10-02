@@ -4,11 +4,12 @@ public class Phone {
     private int serialnumber;
     private String model;
     private String carrier;
-    private String phoneNumber;
+    private static String phoneNumber;
     private String owner;
 
+
     public void dial(String phoneNumber) {
-            System.out.println(owner + " phone is calling " + phoneNumber);
+        System.out.println(owner + " phone is calling " + phoneNumber);
     }
 
     public Phone() {
@@ -17,6 +18,13 @@ public class Phone {
         carrier = "";
         phoneNumber = "";
         owner = "";
+    }
+    public Phone(int serialnumber, String model, String carrier, String phoneNumber, String owner) {
+        this.serialnumber = serialnumber;
+        this.model = model;
+        this.carrier = carrier;
+        this.phoneNumber = phoneNumber;
+        this.owner = owner;
     }
 
     public int getSerialnumber() {
@@ -43,7 +51,7 @@ public class Phone {
         this.carrier = carrier;
     }
 
-    public String getPhoneNumber() {
+    public static String getPhoneNumber() {
         return phoneNumber;
     }
 
@@ -51,8 +59,8 @@ public class Phone {
         this.phoneNumber = phoneNumber;
     }
 
-    public String getOwner() {
-        return owner;
+    public static String getOwner() {
+        return getOwner();
     }
 
     public void setOwner(String owner) {
