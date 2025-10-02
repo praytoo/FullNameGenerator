@@ -7,6 +7,10 @@ public class Phone {
     private String phoneNumber;
     private String owner;
 
+    public void dial(String phoneNumber) {
+            System.out.println(owner + " phone is calling " + phoneNumber);
+    }
+
     public Phone() {
         serialnumber = 0;
         model = "";
